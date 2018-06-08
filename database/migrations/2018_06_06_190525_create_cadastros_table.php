@@ -17,6 +17,8 @@ class CreateCadastrosTable extends Migration
             $table->increments('id');
             $table->string('nome');
             $table->string('status');
+            $table->string('mes');
+            $table->string('tipo');
             $table->timestamps();
         });
     }

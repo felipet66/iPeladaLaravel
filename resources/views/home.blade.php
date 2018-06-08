@@ -37,7 +37,8 @@
                 <tr>
                   <th>Nome</th>
                   <th>Status</th>
-                  <th>Data</th>
+                  <th>Mês</th>
+                  <th>Tipo</th>
                   <th>Ação</th>
                 </tr>
               </thead>
@@ -46,7 +47,8 @@
                 <tr>
                   <td>{{ $usuario['nome'] }}</td>
                   <td>{{ $usuario['status'] }}</td>
-                  <td>{{ $usuario['created_at']}}</td>
+                  <td>{{ $usuario['mes'] }}</td>
+                  <td>{{ $usuario['tipo']}}</td>
                   <td>
                     <a class="btn btn-primary" href="/editar/{{$usuario['id']}}">
                         <i class="fa fa-edit"></i>
