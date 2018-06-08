@@ -21,7 +21,8 @@ Route::get('/pelada', function (){
 Auth::routes();
 
 Route::get('/home', ['as'=>'home','uses' => 'HomeController@index']);
-
 Route::post('/salvar',['as'=>'salvar', 'uses' => 'HomeController@salvar']);
-
 Route::get('/novocadastro', ['uses'=>'HomeController@novoCadastro']);
+Route::get('/editar/{id}', ['as'=>'editar', 'uses' => 'HomeController@editar']);
+Route::put('/atualizar/{id}', ['as' =>'atualizar', 'uses' => 'HomeController@atualizar']);
+Route::get('/deletar/{id}', ['as' => 'deletar', 'uses' => 'HomeController@deletar']);

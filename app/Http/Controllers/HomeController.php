@@ -38,4 +38,20 @@ class HomeController extends Controller
     public function novoCadastro(){
         return view('cadastro');
     }
+
+    public function editar( $id ){
+        $registro = Cadastro::find($id);
+        return view('editar', compact('registro'));
+    }
+
+    public function atualizar( Request $req, $id ){
+        $dados = $req->all();
+        Cadastro::find($id) -> update($dados);
+        return redirect()->route('home');
+    }
+
+    public function deletar( $id ){
+        Cadastro::find($id)->delete();
+        return redirect()->route('home');
+    }
 }

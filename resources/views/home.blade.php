@@ -46,8 +46,16 @@
                 <tr>
                   <td>{{ $usuario['nome'] }}</td>
                   <td>{{ $usuario['status'] }}</td>
-                  <td>07/07/2018</td>
-                  <td><button class="btn btn-primary">Editar</button><button class="btn btn-danger">Deletar</button></td>
+                  <td>{{ $usuario['created_at']}}</td>
+                  <td>
+                    <a class="btn btn-primary" href="/editar/{{$usuario['id']}}">
+                        <i class="fa fa-edit"></i>
+                    </a>
+                    
+                    <a class="btn btn-danger" href="/deletar/{{$usuario['id']}}">
+                      <i class="fa fa-times"></i>
+                    </a>
+                  </td>
                 </tr>
                 @endforeach
               </tbody>
